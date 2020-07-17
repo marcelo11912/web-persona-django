@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+{%extends "base.html" %}
+{% block title %} Portafolio {% endblock%}
+{% load static %}
+
+{% block content %}
+<!---Slider-->
+<section class="slider">
+    <ul class="slides">
+        <li>
+            <img src="{%static 'recursos/banner/portafoli.jpg'%}">
+            <div class="caption left-align">
+                <h3>Portafolio</h3>
+                <h5 class="light grey-text text-lighten-3">Currículo </h5>
+            </div>
+        </li>
+
+    </ul>
+</section>
+
+
+<!---Blog-->
+<br>
+<section class=container>
+    {%if publicaciones %}
+    {%for publicacion in publicaciones %}
+    <div class="row">
+        <div class="col s12 m4 16">
+            <div class="card">
+                <div class="card-image waves-effect waves-block waves-light">
+                    <img class="activator" src="{{publicacion.imagen.url}}" width="100%" height="220">
+                </div>
+                <div class="card-content">
+                    <span class="card-title activator grey-text text-darken-4">{{publicacion.titulo}}<i
+                            class="material-icons right">more_vert</i></span>
+                    {%if publicacion.link  %}
+                    <p><a href="{{publicacion.link}}">Mas informacion..</a></p>
+                    {% else  %}
+                    <p>&nbsp</p>
+                    {% endif%}
+       
+                </div>
+                <div class="card-reveal">
+                    <span class="card-title grey-text text-darken-4">{{publicacion.titulo}}<i
+                            class="material-icons right">close</i></span>
+                    <p>{{publicacion.descripcion}}</p>
+                </div>
+            </div>
+        </div>
+        {% endfor%}
+        {% else  %}
+        <h2>No existen post</h2>
+        {% endif%}
+
+
+    </div>
+
+    </div>
+</section>
+
+{% endblock %}

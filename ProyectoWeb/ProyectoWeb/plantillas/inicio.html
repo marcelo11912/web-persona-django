@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+{%extends "base.html" %}
+{% block title %} Inicio {% endblock%}
+{% load static %}
+
+{% block content %}
+<!---Slider-->
+<section class="slider">
+    <ul class="slides">
+        <li>
+            <img src="{%static 'recursos/banner/Banner1.jpg'%}">
+            <div class=" caption right-align">
+                <h3>Marcelo Arana </h3>
+                <h5 class="light grey-text text-lighten-3">Estudiante de Ingeneria en Sistemass</h5>
+            </div>
+        </li>
+        <li>
+            <img src="{%static 'recursos/banner/banner2.jpg'%}">
+            <div class="caption left-align">
+                <h3>Proyecto Web </h3>
+                <h5 class="light grey-text text-lighten-3">Primer Pasos</h5>
+            </div>
+        </li>
+        <li>
+            <img src="{%static 'recursos/banner/banner3.jpg'%}">
+            <div class="caption right-align">
+                <h3>Django</h3>
+                <h5 class="light grey-text text-lighten-3">Framework </h5>
+            </div>
+        </li>
+
+    </ul>
+</section>
+
+<!--Blog informacion-->
+<br>
+<section class="container">
+    <div class="row">
+        <div class="col s4">
+            <div class="center promo promo-example">
+                <i class="material-icons large">airplay</i>
+                <p class="promo-caption">Django Framework </p>
+                <p class="light center">
+                    Django es un framework de desarrollo web de código abierto, escrito en Python, que respeta el patrón
+                    de diseño conocido como MVC (Modelo–Vista–Controlador).
+                    Fue desarrollado en origen para gestionar varias páginas orientadas a noticias de la World Company
+                    de Lawrence, Kansas, y fue liberada al público bajo una licencia
+                    BSD en julio de 2005; el framework fue nombrado en alusión al guitarrista de jazz gitano Django
+                    Reinhardt.
+                </p>
+            </div>
+        </div>
+
+        <div class="col s4">
+            <div class="center promo promo-example">
+                <i class="material-icons large">pan_tool</i>
+                <p class="promo-caption">MVC </p>
+                <p class="light center">
+                    Es un patrón de arquitectura de software, que separa los datos y principalmente lo que es la lógica
+                    de negocio de una aplicación de su representación y
+                    el módulo encargado de gestionar los eventos y las comunicaciones. Para ello MVC propone la
+                    construcción de tres componentes distintos que son el modelo,
+                    la vista y el controlador, es decir, por un lado define componentes para la representación de la
+                    información, y por otro lado para la interacción del usuario
+                </p>
+            </div>
+        </div>
+        <div class="col s4">
+            <div class="center promo promo-example">
+                <i class="material-icons large">security</i>
+                <p class="promo-caption">Seguridad </p>
+                <p class="light center">
+                    Podemos estar seguro debido a que, Django que implementa por defecto algunas medidas de seguridad,
+                    las más clásicas, para que no haya SQL Injection,
+                    no haya Cross site request forgery (CSRF) o no haya Clickjacking por JavaScript. Django se encarga
+                    de manejar todo esto de una manera realmente sencilla.
+                </p>
+            </div>
+        </div>
+    </div>
+
+   
+
+</section>
+
+
+{% endblock %}
